@@ -268,7 +268,7 @@ const QuickViewModal = () => {
                   </div>
 
                   <span>
-                    <span className="font-medium text-dark"> 4.7 Rating </span>
+                    <span className="font-medium text-dark"> 5 Rating </span>
                     <span className="text-dark-2"> (5 reviews) </span>
                   </span>
                 </div>
