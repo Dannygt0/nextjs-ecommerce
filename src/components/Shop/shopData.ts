@@ -136,6 +136,23 @@ const shopData: Product[] = [
       ],
     },
   },
+  {
+    title: "Iphone 17 ProMax",
+    reviews: 15,
+    price: 1300.0,
+    discountedPrice: 1199.99,
+    id: 9,
+    imgs: {
+      thumbnails: [
+        "/images/products/product-9-bg-1.png",
+        "/images/products/product-9-bg-2.png",
+      ],
+      previews: [
+        "/images/products/product-9-bg-1.png",
+        "/images/products/product-9-bg-2.png",
+      ],
+    },
+  },
 ];
 
 export default shopData;
