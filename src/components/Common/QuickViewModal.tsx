@@ -22,10 +22,24 @@ const QuickViewModal = () => {
 
   const [activePreview, setActivePreview] = useState(0);
 
-  // preview modal
-  const handlePreviewSlider = () => {
-    dispatch(updateproductDetails(product));
 
+  const handlePreviewSlider = () => {
+    if (!product?.imgs?.previews) return;
+    const currentActiveImage = product.imgs.previews[activePreview];
+
+    const otherImages = product.imgs.previews.filter(
+      (_, index) => index !== activePreview
+    );
+
+    const productWithActiveImageFirst = {
+      ...product,
+      imgs: {
+        ...product.imgs,
+        previews: [currentActiveImage, ...otherImages],
+      },
+    };
+
+    dispatch(updateproductDetails(productWithActiveImageFirst));
     openPreviewModal();
   };
 
@@ -35,35 +49,43 @@ const QuickViewModal = () => {
       addItemToCart({
         ...product,
         quantity,
-      })
+      }),
     );
 
     closeModal();
   };
 
   useEffect(() => {
-    // closing modal while clicking outside
-    function handleClickOutside(event) {
-      if (!event.target.closest(".modal-content")) {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!(event.target as Element).closest(".modal-content")) {
         closeModal();
       }
-    }
+    };
 
     if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleEsc);
       document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.body.style.overflow = "";
     }
-
     return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEsc);
       document.removeEventListener("mousedown", handleClickOutside);
 
       setQuantity(1);
     };
   }, [isModalOpen, closeModal]);
-
   return (
     <div
-      className={`${isModalOpen ? "z-99999" : "hidden"
-        } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full h-screen sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 sm:px-8 px-4 py-5`}
+      className={`${
+        isModalOpen ? "z-99999" : "hidden"
+      } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full h-screen sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 sm:px-8 px-4 py-5`}
     >
       <div className="flex items-center justify-center ">
         <div className="w-full max-w-[1100px] rounded-xl shadow-3 bg-white p-7.5 relative modal-content">
@@ -97,8 +119,9 @@ const QuickViewModal = () => {
                     <button
                       onClick={() => setActivePreview(key)}
                       key={key}
-                      className={`flex items-center justify-center w-20 h-20 overflow-hidden rounded-lg bg-gray-1 ease-out duration-200 hover:border-2 hover:border-blue ${activePreview === key && "border-2 border-blue"
-                        }`}
+                      className={`flex items-center justify-center w-20 h-20 overflow-hidden rounded-lg bg-gray-1 ease-out duration-200 hover:border-2 hover:border-blue ${
+                        activePreview === key && "border-2 border-blue"
+                      }`}
                     >
                       <Image
                         src={img || ""}
@@ -268,8 +291,14 @@ const QuickViewModal = () => {
                   </div>
 
                   <span>
-                    <span className="font-medium text-dark"> 5 Rating </span>
-                    <span className="text-dark-2"> (5 reviews) </span>
+                    <span className="font-medium text-dark">
+                      {" "}
+                      {product.rating} Rating{" "}
+                    </span>
+                    <span className="text-dark-2">
+                      {" "}
+                      ({product.reviews} Reviews){" "}
+                    </span>
                   </span>
                 </div>
 
@@ -302,10 +331,7 @@ const QuickViewModal = () => {
                 </div>
               </div>
 
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has.
-              </p>
+              <p>{product.description}</p>
 
               <div className="flex flex-wrap justify-between gap-5 mt-6 mb-7.5">
                 <div>

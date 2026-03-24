@@ -73,7 +73,7 @@ const HeroCarousal = () => {
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-26 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
               <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-                30%
+                10%
               </span>
               <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
                 Sale
@@ -83,12 +83,11 @@ const HeroCarousal = () => {
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">True Wireless Noise Cancelling Headphone</a>
+              <a href="#">Samsung Galaxy S26 Ultra</a>
             </h1>
 
             <p>
-              Lorem ipsum dolor sit, consectetur elit nunc suscipit non ipsum
-              nec suscipit.
+              Meet Galaxy S26 Ultra, the new AI phone with a built-in Privacy Display, our brightest camera and customized processor that delivers smarter Galaxy AI.
             </p>
 
             <a
@@ -101,8 +100,8 @@ const HeroCarousal = () => {
 
           <div>
             <Image
-              src="/images/hero/hero-01.png"
-              alt="headphone"
+              src="/images/hero/hero-05.png"
+              alt="Galaxy S26 Ultra"
               width={351}
               height={358}
             />
