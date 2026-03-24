@@ -26,7 +26,7 @@ const shopData: Product[] = [
     rating: 4.8,
     reviews: 5,
     price: 899.0,
-    discountedPrice: 99.0, // ¡Qué ofertón!
+    discountedPrice: 99.0, 
     id: 2,
     imgs: {
       thumbnails: [
