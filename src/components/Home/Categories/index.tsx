@@ -5,8 +5,8 @@ import data from "./categoryData";
 import Image from "next/image";
 
 // Import Swiper styles
-import "swiper/css/navigation";
 import "swiper/css";
+import "swiper/css/navigation";
 import SingleItem from "./SingleItem";
 
 const Categories = () => {

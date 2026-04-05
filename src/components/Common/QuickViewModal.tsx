@@ -138,12 +138,13 @@ const QuickViewModal = () => {
 
             <div className="max-w-[445px] w-full">
               <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-green mb-6.5">
-                SALE 20% OFF
+                SALE 10% OFF
               </span>
 
               <h3 className="font-semibold text-xl xl:text-heading-5 text-dark mb-4">
                 {product.title}
               </h3>
+              <p>{product.category}</p>
 
               <div className="flex flex-wrap items-center gap-5 mb-6">
                 <div className="flex items-center gap-1.5">
@@ -190,6 +191,7 @@ const QuickViewModal = () => {
                       {" "}
                       ({product.reviews} Reviews){" "}
                     </span>
+
                   </span>
                 </div>
 
