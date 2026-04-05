@@ -1,5 +1,6 @@
 export type Product = {
   title: string;
+  category: string;
   reviews: number;
   description: string;
   rating: number;
