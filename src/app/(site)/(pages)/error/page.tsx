@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Error from "@/components/Error";
 
 import { Metadata } from "next";

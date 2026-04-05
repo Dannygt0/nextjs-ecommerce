@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import MailSuccess from "@/components/MailSuccess";
 
 import { Metadata } from "next";

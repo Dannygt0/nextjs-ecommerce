@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 import { Product } from "@/types/product";
 import { useModalContext } from "@/app/context/QuickViewModalContext";

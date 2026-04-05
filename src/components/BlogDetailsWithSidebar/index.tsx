@@ -6,6 +6,7 @@ import LatestProducts from "../Blog/LatestProducts";
 import blogData from "../BlogGrid/blogData";
 import Image from "next/image";
 import shopData from "../Shop/shopData"; 
+import Title from "@/components/SubComponent/Title"
 
 const BlogDetailsWithSidebar = () => {
   return (
@@ -43,9 +44,9 @@ const BlogDetailsWithSidebar = () => {
                   </a>
                 </span>
 
-                <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
+                <Title className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
                   What information is needed for shipping?
-                </h2>
+                </Title>
 
                 <p className="mb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -277,9 +278,9 @@ const BlogDetailsWithSidebar = () => {
               {/* <!-- Popular Category box --> */}
               <div className="shadow-1 bg-white rounded-xl mt-7.5">
                 <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-                  <h2 className="font-medium text-lg text-dark">
+                  <Title className="font-medium text-lg text-dark">
                     Popular Category
-                  </h2>
+                  </Title>
                 </div>
 
                 <div className="p-4 sm:p-6">
@@ -346,7 +347,7 @@ const BlogDetailsWithSidebar = () => {
               {/* <!-- Tags box --> */}
               <div className="shadow-1 bg-white rounded-xl mt-7.5">
                 <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-                  <h2 className="font-medium text-lg text-dark">Tags</h2>
+                  <Title className="font-medium text-lg text-dark">Tags</Title>
                 </div>
 
                 <div className="p-4 sm:p-6">

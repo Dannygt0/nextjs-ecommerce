@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,9 +34,9 @@ const BlogDetails = () => {
               </a>
             </span>
 
-            <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
+            <Title className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
               What information is needed for shipping?
-            </h2>
+            </Title>
 
             <p className="mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer

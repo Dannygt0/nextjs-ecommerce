@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 
 const featureData = [

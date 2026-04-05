@@ -1,5 +1,6 @@
 import MyAccount from "@/components/MyAccount";
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 
 import { Metadata } from "next";
 export const metadata: Metadata = {

@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useCallback, useRef, useEffect } from "react";
 import data from "./categoryData";
 import Image from "next/image";
+import Title from "@/components/SubComponent/Title"
+
+
 
 // Import Swiper styles
 import "swiper/css/navigation";
@@ -72,9 +75,9 @@ const Categories = () => {
                 </svg>
                 Categories
               </span>
-              <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+              <Title className="font-semibold text-xl xl:text-heading-5 text-dark">
                 Browse by Category
-              </h2>
+              </Title>
             </div>
 
             <div className="flex items-center gap-3">

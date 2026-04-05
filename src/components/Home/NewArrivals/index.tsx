@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 import Link from "next/link";
 import ProductItem from "@/components/Common/ProductItem";
@@ -33,9 +34,9 @@ const NewArrival = () => {
               </svg>
               This Week’s
             </span>
-            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+            <Title className="font-semibold text-xl xl:text-heading-5 text-dark">
               New Arrivals
-            </h2>
+            </Title>
           </div>
 
           <Link

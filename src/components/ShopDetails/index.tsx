@@ -163,9 +163,9 @@ const ShopDetails = () => {
                 {/* <!-- product content --> */}
                 <div className="max-w-[539px] w-full">
                   <div className="flex items-center justify-between mb-3">
-                    <h2 className="font-semibold text-xl sm:text-2xl xl:text-custom-3 text-dark">
+                    <Title className="font-semibold text-xl sm:text-2xl xl:text-custom-3 text-dark">
                       {product.title}
-                    </h2>
+                    </Title>
 
                     <div className="inline-flex font-medium text-custom-sm text-white bg-blue rounded py-0.5 px-2.5">
                       30% OFF
@@ -725,9 +725,9 @@ const ShopDetails = () => {
                     }`}
                 >
                   <div className="max-w-[670px] w-full">
-                    <h2 className="font-medium text-2xl text-dark mb-7">
+                    <Title className="font-medium text-2xl text-dark mb-7">
                       Specifications:
-                    </h2>
+                    </Title>
 
                     <p className="mb-6">
                       Lorem Ipsum is simply dummy text of the printing and
@@ -749,9 +749,9 @@ const ShopDetails = () => {
                   </div>
 
                   <div className="max-w-[447px] w-full">
-                    <h2 className="font-medium text-2xl text-dark mb-7">
+                    <Title className="font-medium text-2xl text-dark mb-7">
                       Care & Maintenance:
-                    </h2>
+                    </Title>
 
                     <p className="mb-6">
                       Lorem Ipsum is simply dummy text of the printing and
@@ -919,9 +919,9 @@ const ShopDetails = () => {
                     }`}
                 >
                   <div className="max-w-[570px] w-full">
-                    <h2 className="font-medium text-2xl text-dark mb-9">
+                    <Title className="font-medium text-2xl text-dark mb-9">
                       03 Review for this product
-                    </h2>
+                    </Title>
 
                     <div className="flex flex-col gap-6">
                       {/* <!-- review item --> */}
@@ -1270,9 +1270,9 @@ const ShopDetails = () => {
 
                   <div className="max-w-[550px] w-full">
                     <form>
-                      <h2 className="font-medium text-2xl text-dark mb-3.5">
+                      <Title className="font-medium text-2xl text-dark mb-3.5">
                         Add a Review
-                      </h2>
+                      </Title>
 
                       <p className="mb-6">
                         Your email address will not be published. Required

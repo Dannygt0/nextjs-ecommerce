@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import BlogGrid from "@/components/BlogGrid";
 
 import { Metadata } from "next";

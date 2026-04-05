@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Checkout from "@/components/Checkout";
 
 import { Metadata } from "next";

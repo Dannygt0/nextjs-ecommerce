@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Title from "@/components/SubComponent/Title"
 
 const CounDown = () => {
   const [days, setDays] = useState(0);
@@ -35,9 +36,9 @@ const CounDown = () => {
               Don’t Miss!!
             </span>
 
-            <h2 className="font-bold text-dark text-xl lg:text-heading-4 xl:text-heading-3 mb-3">
+            <Title className="font-bold text-dark text-xl lg:text-heading-4 xl:text-heading-3 mb-3">
               Enhance Your Music Experience
-            </h2>
+            </Title>
 
             <p>The Havit H206d is a wired PC headphone.</p>
 

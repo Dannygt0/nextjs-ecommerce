@@ -1,6 +1,7 @@
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useAppSelector } from "@/redux/store";
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import { useSelector } from "react-redux";
 
 const OrderSummary = () => {

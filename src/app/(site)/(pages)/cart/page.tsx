@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Cart from "@/components/Cart";
 
 import { Metadata } from "next";
