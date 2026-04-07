@@ -2,23 +2,25 @@
 
 import { useState } from "react";
 
-const CategoryItem = ({ category }) => {
-  const [selected, setSelected] = useState(false);
+
+const CategoryItem = ({ category, selectedCategories, onToggle}) => {
+
+const isSelected = selectedCategories.includes(category.name);
   return (
     <button
       className={`${
-        selected && "text-blue"
+        isSelected && "text-blue"
       } group flex items-center justify-between ease-out duration-200 hover:text-blue `}
-      onClick={() => setSelected(!selected)}
+      onClick={() => onToggle(category.name)}
     >
       <div className="flex items-center gap-2">
         <div
           className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${
-            selected ? "border-blue bg-blue" : "bg-white border-gray-3"
+            isSelected ? "border-blue bg-blue" : "bg-white border-gray-3"
           }`}
         >
           <svg
-            className={selected ? "block" : "hidden"}
+            className={isSelected ? "block" : "hidden"}
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -40,7 +42,7 @@ const CategoryItem = ({ category }) => {
 
       <span
         className={`${
-          selected ? "text-white bg-blue" : "bg-gray-2"
+          isSelected ? "text-white bg-blue" : "bg-gray-2"
         } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-blue`}
       >
         {category.products}
@@ -48,9 +50,10 @@ const CategoryItem = ({ category }) => {
     </button>
   );
 };
+const CategoryDropdown = ({ categories, selectedCategories, onToggle }) => {
 
-const CategoryDropdown = ({ categories }) => {
-  const [toggleDropdown, setToggleDropdown] = useState(true);
+
+const [toggleDropdown, setToggleDropdown] = useState(true);
 
   return (
     <div className="bg-white shadow-1 rounded-lg">
@@ -96,8 +99,8 @@ const CategoryDropdown = ({ categories }) => {
         }`}
       >
         {categories.map((category, key) => (
-          <CategoryItem key={key} category={category} />
-        ))}
+          <CategoryItem key={key} category={category} selectedCategories={selectedCategories} onToggle={onToggle} />
+      ))}
       </div>
     </div>
   );

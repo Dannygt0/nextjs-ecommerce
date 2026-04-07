@@ -2,9 +2,9 @@ import { Testimonial } from "@/types/testimonial";
 
 const testimonialsData: Testimonial[] = [
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Davis Dorwart",
+    review: `I ordered the phone easy activation for eSIM card and had service in 5 minutes. I got a good version no scratches cracks or anything very happen was unlocked 0 complaints buy it!!
+`,
+    authorName: "Milton Ayala",
     authorImg: "/images/users/user-01.jpg",
     authorRole: "Serial Entrepreneur",
   },
