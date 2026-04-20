@@ -1,5 +1,3 @@
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import Image from "next/image";

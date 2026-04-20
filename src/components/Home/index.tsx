@@ -1,5 +1,3 @@
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import Hero from "./Hero";
 import Categories from "./Categories";
 import NewArrival from "./NewArrivals";

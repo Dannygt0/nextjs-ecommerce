@@ -6,6 +6,8 @@ import Newsletter from "../Common/Newsletter";
 import RecentlyViewdItems from "./RecentlyViewd";
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { useAppSelector } from "@/redux/store";
+import Title from '@/components/SubComponent/Title';
+
 
 const ShopDetails = () => {
   const [activeColor, setActiveColor] = useState("blue");
@@ -163,7 +165,7 @@ const ShopDetails = () => {
                 {/* <!-- product content --> */}
                 <div className="max-w-[539px] w-full">
                   <div className="flex items-center justify-between mb-3">
-                    <Title className="font-semibold text-xl sm:text-2xl xl:text-custom-3 text-dark">
+                    <Title>
                       {product.title}
                     </Title>
 
@@ -725,7 +727,7 @@ const ShopDetails = () => {
                     }`}
                 >
                   <div className="max-w-[670px] w-full">
-                    <Title className="font-medium text-2xl text-dark mb-7">
+                    <Title>
                       Specifications:
                     </Title>
 
@@ -749,7 +751,7 @@ const ShopDetails = () => {
                   </div>
 
                   <div className="max-w-[447px] w-full">
-                    <Title className="font-medium text-2xl text-dark mb-7">
+                    <Title>
                       Care & Maintenance:
                     </Title>
 
@@ -919,7 +921,7 @@ const ShopDetails = () => {
                     }`}
                 >
                   <div className="max-w-[570px] w-full">
-                    <Title className="font-medium text-2xl text-dark mb-9">
+                    <Title>
                       03 Review for this product
                     </Title>
 
@@ -1270,7 +1272,7 @@ const ShopDetails = () => {
 
                   <div className="max-w-[550px] w-full">
                     <form>
-                      <Title className="font-medium text-2xl text-dark mb-3.5">
+                      <Title>
                         Add a Review
                       </Title>
 

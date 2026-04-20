@@ -20,7 +20,7 @@ const Error = () => {
                 height={190}
               />
 
-              <Title className="font-medium text-dark text-xl sm:text-2xl mb-3">
+              <Title>
                 Sorry, the page can’t be found
               </Title>
 

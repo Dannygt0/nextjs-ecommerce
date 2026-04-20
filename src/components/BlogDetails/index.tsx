@@ -1,8 +1,6 @@
-import React from "react";
 import Title from '@/components/SubComponent/Title';
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
-import Link from "next/link";
 
 const BlogDetails = () => {
   return (
@@ -34,7 +32,7 @@ const BlogDetails = () => {
               </a>
             </span>
 
-            <Title className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
+            <Title>
               What information is needed for shipping?
             </Title>
 

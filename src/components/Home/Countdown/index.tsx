@@ -36,7 +36,7 @@ const CounDown = () => {
               Don’t Miss!!
             </span>
 
-            <Title className="font-bold text-dark text-xl lg:text-heading-4 xl:text-heading-3 mb-3">
+            <Title>
               Enhance Your Music Experience
             </Title>
 

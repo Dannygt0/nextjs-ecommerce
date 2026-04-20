@@ -1,5 +1,3 @@
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import BlogGridWithSidebar from "@/components/BlogGridWithSidebar";
 
 import { Metadata } from "next";

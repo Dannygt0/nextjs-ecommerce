@@ -21,7 +21,7 @@ const BestSeller = () => {
               />
               This Month
             </span>
-            <Title className="font-semibold text-xl xl:text-heading-5 text-dark">
+            <Title>
               Best Sellers
             </Title>
           </div>

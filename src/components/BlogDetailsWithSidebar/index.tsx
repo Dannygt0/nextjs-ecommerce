@@ -44,7 +44,7 @@ const BlogDetailsWithSidebar = () => {
                   </a>
                 </span>
 
-                <Title className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
+                <Title>
                   What information is needed for shipping?
                 </Title>
 
@@ -278,7 +278,7 @@ const BlogDetailsWithSidebar = () => {
               {/* <!-- Popular Category box --> */}
               <div className="shadow-1 bg-white rounded-xl mt-7.5">
                 <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-                  <Title className="font-medium text-lg text-dark">
+                  <Title>
                     Popular Category
                   </Title>
                 </div>
@@ -347,7 +347,7 @@ const BlogDetailsWithSidebar = () => {
               {/* <!-- Tags box --> */}
               <div className="shadow-1 bg-white rounded-xl mt-7.5">
                 <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-                  <Title className="font-medium text-lg text-dark">Tags</Title>
+                  <Title>Tags</Title>
                 </div>
 
                 <div className="p-4 sm:p-6">

@@ -1,4 +1,3 @@
-import React from "react";
 import Title from '@/components/SubComponent/Title';
 import HeroCarousel from "./HeroCarousel";
 import HeroFeature from "./HeroFeature";
@@ -29,7 +28,7 @@ const Hero = () => {
               <div className="w-full relative rounded-[10px] bg-white p-4 sm:p-7.5">
                 <div className="flex items-center gap-14">
                   <div>
-                    <Title className="max-w-[153px] font-semibold text-dark text-xl mb-20">
+                    <Title>
                       <a href="#"> iPhone 14 Plus & 14 Pro Max </a>
                     </Title>
 
@@ -61,7 +60,7 @@ const Hero = () => {
               <div className="w-full relative rounded-[10px] bg-white p-4 sm:p-7.5">
                 <div className="flex items-center gap-14">
                   <div>
-                    <Title className="max-w-[153px] font-semibold text-dark text-xl mb-20">
+                    <Title>
                       <a href="#"> Wireless Headphone </a>
                     </Title>
 

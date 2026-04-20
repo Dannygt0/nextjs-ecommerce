@@ -1,4 +1,3 @@
-import React from "react";
 import Title from '@/components/SubComponent/Title';
 import { BlogItem } from "@/types/blogItem";
 import Image from "next/image";
@@ -37,7 +36,7 @@ const BlogItem = ({ blog }: { blog: BlogItem }) => {
           </a>
         </span>
 
-        <Title className="font-medium text-dark text-lg sm:text-xl ease-out duration-200 mb-4 hover:text-blue">
+        <Title>
           <Link href="/blogs/blog-details">{blog.title}</Link>
         </Title>
 

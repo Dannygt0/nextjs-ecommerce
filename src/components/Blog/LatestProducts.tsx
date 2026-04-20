@@ -1,4 +1,3 @@
-import React from "react";
 import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +6,7 @@ const LatestProducts = ({ products }) => {
   return (
     <div className="shadow-1 bg-white rounded-xl mt-7.5">
       <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-        <Title className="font-medium text-lg text-dark">Latest Products</Title>
+        <Title>Latest Products</Title>
       </div>
 
       <div className="p-4 sm:p-6">

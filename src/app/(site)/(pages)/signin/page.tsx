@@ -1,6 +1,4 @@
 import Signin from "@/components/Auth/Signin";
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Signin Page | NextCommerce Nextjs E-commerce template",

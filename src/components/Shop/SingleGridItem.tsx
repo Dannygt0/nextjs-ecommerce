@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import { Product } from "@/types/product";
 import { useModalContext } from "@/app/context/QuickViewModalContext";
 import { updateQuickView } from "@/redux/features/quickView-slice";

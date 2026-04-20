@@ -1,10 +1,9 @@
-import React from "react";
 import Title from '@/components/SubComponent/Title';
 
 const Billing = () => {
   return (
     <div className="mt-9">
-      <Title className="font-medium text-dark text-xl sm:text-2xl mb-5.5">
+      <Title>
         Billing details
       </Title>
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 
@@ -13,7 +12,7 @@ const PromoBanner = () => {
               Apple iPhone 14 Plus
             </span>
 
-            <Title className="font-bold text-xl lg:text-heading-4 xl:text-heading-3 text-dark mb-5">
+            <Title>
               UP TO 30% OFF
             </Title>
 
@@ -55,7 +54,7 @@ const PromoBanner = () => {
                 Foldable Motorised Treadmill
               </span>
 
-              <Title className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
+              <Title>
                 Workout At Home
               </Title>
 
@@ -87,7 +86,7 @@ const PromoBanner = () => {
                 Apple Watch Ultra
               </span>
 
-              <Title className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
+              <Title>
                 Up to <span className="text-orange">40%</span> off
               </Title>
 

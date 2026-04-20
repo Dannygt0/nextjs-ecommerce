@@ -1,5 +1,3 @@
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import Breadcrumb from "../Common/Breadcrumb";
 import blogData from "./blogData";
 import BlogItem from "../Blog/BlogItem";

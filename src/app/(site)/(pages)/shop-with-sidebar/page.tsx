@@ -1,5 +1,3 @@
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import ShopWithSidebar from "@/components/ShopWithSidebar";
 
 import { Metadata } from "next";

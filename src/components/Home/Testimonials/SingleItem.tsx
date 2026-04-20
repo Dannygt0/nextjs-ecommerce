@@ -1,5 +1,3 @@
-import React from "react";
-import Title from '@/components/SubComponent/Title';
 import { Testimonial } from "@/types/testimonial";
 import Image from "next/image";
 
