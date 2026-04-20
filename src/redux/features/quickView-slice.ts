@@ -15,8 +15,8 @@ const initialState = {
     id: 0,
     images: [],
     imgs: { thumbnails: [], previews: [] },
-    description: "",
-    rating: 0
+    description: "", 
+    rating: 0,       
   } as Product,
 } as InitialState;
 
@@ -24,7 +24,7 @@ export const quickView = createSlice({
   name: "quickView",
   initialState,
   reducers: {
-    updateQuickView: (_, action) => {
+    updateQuickView: (_, action: PayloadAction<Product>) => {
       return {
         value: {
           ...action.payload,
