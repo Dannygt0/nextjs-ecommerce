@@ -1,5 +1,6 @@
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
+import Title from '@/components/SubComponent/Title';
 
 const BlogDetails = () => {
   return (
