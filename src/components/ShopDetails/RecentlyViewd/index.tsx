@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
+import Title from '@/components/SubComponent/Title';
 import shopData from "@/components/Shop/shopData";
 import ProductItem from "@/components/Common/ProductItem";
 import Image from "next/image";
-import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useCallback, useRef } from "react";
@@ -39,9 +38,9 @@ const RecentlyViewdItems = () => {
                 />
                 Categories
               </span>
-              <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+              <Title>
                 Browse by Category
-              </h2>
+              </Title>
             </div>
 
             <div className="flex items-center gap-3">

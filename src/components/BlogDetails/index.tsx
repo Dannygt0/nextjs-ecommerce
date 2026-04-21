@@ -1,5 +1,6 @@
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
+import Title from '@/components/SubComponent/Title';
 
 const BlogDetails = () => {
   return (
@@ -31,9 +32,9 @@ const BlogDetails = () => {
               </a>
             </span>
 
-            <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
+            <Title>
               What information is needed for shipping?
-            </h2>
+            </Title>
 
             <p className="mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer

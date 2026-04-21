@@ -1,4 +1,3 @@
-import React from "react";
 import Cart from "@/components/Cart";
 
 import { Metadata } from "next";

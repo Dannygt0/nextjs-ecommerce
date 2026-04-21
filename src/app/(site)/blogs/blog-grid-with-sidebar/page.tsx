@@ -1,4 +1,3 @@
-import React from "react";
 import BlogGridWithSidebar from "@/components/BlogGridWithSidebar";
 
 import { Metadata } from "next";

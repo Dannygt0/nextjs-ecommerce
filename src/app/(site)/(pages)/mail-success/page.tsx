@@ -1,4 +1,3 @@
-import React from "react";
 import MailSuccess from "@/components/MailSuccess";
 
 import { Metadata } from "next";

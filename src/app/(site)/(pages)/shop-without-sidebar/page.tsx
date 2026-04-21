@@ -1,4 +1,3 @@
-import React from "react";
 import ShopWithoutSidebar from "@/components/ShopWithoutSidebar";
 
 import { Metadata } from "next";

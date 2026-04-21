@@ -1,5 +1,6 @@
 import { Category } from "@/types/category";
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 
 const SingleItem = ({ item }: { item: Category }) => {
