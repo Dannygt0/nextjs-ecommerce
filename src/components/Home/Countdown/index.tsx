@@ -9,7 +9,7 @@ const CounDown = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const deadline = "December, 31, 2024";
+  const deadline = "April, 21, 2026";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();

@@ -8,8 +8,8 @@ import Title from "@/components/SubComponent/Title"
 
 
 // Import Swiper styles
-import "swiper/css/navigation";
 import "swiper/css";
+import "swiper/css/navigation";
 import SingleItem from "./SingleItem";
 
 const Categories = () => {

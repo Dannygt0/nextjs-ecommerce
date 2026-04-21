@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import CustomSelect from "./CustomSelect";
 import CategoryDropdown from "./CategoryDropdown";
-import GenderDropdown from "./GenderDropdown";
 import SizeDropdown from "./SizeDropdown";
 import ColorsDropdwon from "./ColorsDropdwon";
 import PriceDropdown from "./PriceDropdown";
@@ -15,6 +14,19 @@ const ShopWithSidebar = () => {
   const [productStyle, setProductStyle] = useState("grid");
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
+  const ToggleCategory = (categoryName) => {
+    if (selectedCategories.includes(categoryName)) {
+      const newList = selectedCategories.filter(
+        (item) => item !== categoryName,
+      );
+      setSelectedCategories(newList);
+    } else {
+      const newList = [...selectedCategories, categoryName];
+      setSelectedCategories(newList);
+    }
+  };
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -30,35 +42,25 @@ const ShopWithSidebar = () => {
     { label: "Old Products", value: "2" },
   ];
 
-  const categories = [
+const categories = [
     {
-      name: "Desktop",
-      products: 10,
-      isRefined: true,
-    },
-    {
-      name: "Laptop",
-      products: 12,
+      name: "Games & Videos",
+      products: 1, // (Opcional: puedes poner el número real de productos)
       isRefined: false,
     },
     {
-      name: "Monitor",
-      products: 30,
+      name: "Mobile & Tablets",
+      products: 4,
       isRefined: false,
     },
     {
-      name: "UPS",
-      products: 23,
+      name: "Laptop & PC",
+      products: 4,
       isRefined: false,
     },
     {
-      name: "Phone",
-      products: 10,
-      isRefined: false,
-    },
-    {
-      name: "Watch",
-      products: 13,
+      name: "Watches",
+      products: 1,
       isRefined: false,
     },
   ];
@@ -77,6 +79,10 @@ const ShopWithSidebar = () => {
       products: 8,
     },
   ];
+   const filteredProducts = shopData.filter((product) => {
+      if (selectedCategories.length === 0) return true;
+      return selectedCategories.includes(product.category);
+    });
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -91,7 +97,6 @@ const ShopWithSidebar = () => {
     if (productSidebar) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -152,15 +157,22 @@ const ShopWithSidebar = () => {
                   <div className="bg-white shadow-1 rounded-lg py-4 px-5">
                     <div className="flex items-center justify-between">
                       <p>Filters:</p>
-                      <button className="text-blue">Clean All</button>
+                      <button
+                        onClick={() => setSelectedCategories([])}
+                        className="text-blue"
+                      >
+                        Clean All
+                      </button>
                     </div>
                   </div>
 
                   {/* <!-- category box --> */}
-                  <CategoryDropdown categories={categories} />
+                  <CategoryDropdown
+                    categories={categories}
+                    selectedCategories={selectedCategories}
+                    onToggle={ToggleCategory}
+                  />
 
-                  {/* <!-- gender box --> */}
-                  <GenderDropdown genders={genders} />
 
                   {/* // <!-- size box --> */}
                   <SizeDropdown />
@@ -278,12 +290,12 @@ const ShopWithSidebar = () => {
                     : "flex flex-col gap-7.5"
                 }`}
               >
-                {shopData.map((item, key) =>
+                {filteredProducts.map((item, key) =>
                   productStyle === "grid" ? (
                     <SingleGridItem item={item} key={key} />
                   ) : (
                     <SingleListItem item={item} key={key} />
-                  )
+                  ),
                 )}
               </div>
               {/* <!-- Products Grid Tab Content End --> */}
