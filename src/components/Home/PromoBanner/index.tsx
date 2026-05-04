@@ -1,4 +1,4 @@
-import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Image from "next/image";
 
 const PromoBanner = () => {
@@ -12,9 +12,9 @@ const PromoBanner = () => {
               Apple iPhone 14 Plus
             </span>
 
-            <h2 className="font-bold text-xl lg:text-heading-4 xl:text-heading-3 text-dark mb-5">
+            <Title>
               UP TO 30% OFF
-            </h2>
+            </Title>
 
             <p>
               iPhone 14 has the same superspeedy chip that’s in iPhone 13 Pro,
@@ -54,9 +54,9 @@ const PromoBanner = () => {
                 Foldable Motorised Treadmill
               </span>
 
-              <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
+              <Title>
                 Workout At Home
-              </h2>
+              </Title>
 
               <p className="font-semibold text-custom-1 text-teal">
                 Flat 20% off
@@ -86,9 +86,9 @@ const PromoBanner = () => {
                 Apple Watch Ultra
               </span>
 
-              <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
+              <Title>
                 Up to <span className="text-orange">40%</span> off
-              </h2>
+              </Title>
 
               <p className="max-w-[285px] text-custom-sm">
                 The aerospace-grade titanium case strikes the perfect balance of

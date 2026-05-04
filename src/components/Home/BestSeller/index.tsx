@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import SingleItem from "./SingleItem";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,9 +21,9 @@ const BestSeller = () => {
               />
               This Month
             </span>
-            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+            <Title>
               Best Sellers
-            </h2>
+            </Title>
           </div>
         </div>
 

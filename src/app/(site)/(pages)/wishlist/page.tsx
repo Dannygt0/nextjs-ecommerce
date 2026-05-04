@@ -1,4 +1,5 @@
 import React from "react";
+import Title from '@/components/SubComponent/Title';
 import { Wishlist } from "@/components/Wishlist";
 import { Metadata } from "next";
 

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import Title from '@/components/SubComponent/Title';
 import Breadcrumb from "../Common/Breadcrumb";
 import { useAppSelector } from "@/redux/store";
 import SingleItem from "./SingleItem";
@@ -13,7 +13,7 @@ export const Wishlist = () => {
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex flex-wrap items-center justify-between gap-5 mb-7.5">
-            <h2 className="font-medium text-dark text-2xl">Your Wishlist</h2>
+            <Title>Your Wishlist</Title>
             <button className="text-blue">Clear Wishlist Cart</button>
           </div>
 

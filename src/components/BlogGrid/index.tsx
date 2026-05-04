@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import blogData from "./blogData";
 import BlogItem from "../Blog/BlogItem";
