@@ -1,11 +1,9 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useCallback, useRef, useEffect } from "react";
-import data from "./categoryData";
-import Image from "next/image";
-import Title from "@/components/SubComponent/Title"
-
-
+import { useCallback, useRef } from "react";
+import Title from "@/components/SubComponent/Title";
+import { useState, useEffect } from "react";
+import { getCategories } from "@/lib/contentful";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,11 +22,20 @@ const Categories = () => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+  const [categories, setCategories] = useState<any[]>([]);
 
   useEffect(() => {
-    if (sliderRef.current) {
-      sliderRef.current.swiper.init();
-    }
+    const fetchCategories = async () => {
+      try {
+        const entries = await getCategories();
+        console.log("Datos recibidos de Contentful:", entries); // 👈 Añade esto
+        setCategories(entries);
+      } catch (error) {
+        console.error("No se pudieron cargar las categorías:", error);
+      }
+    };
+
+    fetchCategories();
   }, []);
 
   return (
@@ -75,9 +82,7 @@ const Categories = () => {
                 </svg>
                 Categories
               </span>
-              <Title>
-                Browse by Category
-              </Title>
+              <Title>Browse by Category</Title>
             </div>
 
             <div className="flex items-center gap-3">
@@ -137,7 +142,7 @@ const Categories = () => {
               },
             }}
           >
-            {data.map((item, key) => (
+            {categories.map((item, key) => (
               <SwiperSlide key={key}>
                 <SingleItem item={item} />
               </SwiperSlide>
